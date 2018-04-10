@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="paperformat_thai_portrait" model="report.paperformat">
+        <field name="name">Thai A4 Portrait</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">23</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">35</field>
+        <!-- fix for wkhtmltopdf 0.12.4: set dpi=300 -->
+        <field name="dpi">300</field>
+    </record>
+
+
+    <template id="custom_report_assets" name="wk_custom_report.custom_report_assets"
+              inherit_id="web.report_assets_common">
+        <xpath expr=".">
+            <link href="/wk_custom_report/static/base-extend.css" rel="stylesheet"/>
+        </xpath>
+    </template>
+
+</odoo>

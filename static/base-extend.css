@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'THSarabunNew';
+    src:url('/wk_custom_report/static/font/thsarabunnew-webfont.woff');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body {
+    font-family: 'THSarabunNew';
+    font-size: 14px;
+}
+
+div {
+    border: 1px solid red;
+}
